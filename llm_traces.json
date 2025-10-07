@@ -1,0 +1,120 @@
+{
+    "project": "LLM Evaluation Exercise",
+    "version": "1.0",
+    "traces": [
+        {
+            "trace_id": "trace_001",
+            "user_query": "Who won the 2018 World Cup?",
+            "metadata": {
+                "user_id": "u123",
+                "region": "EU",
+                "timestamp": "2025-09-24T20:15:00Z"
+            },
+            "steps": [
+                {
+                    "name": "retrieval",
+                    "latency_ms": 150,
+                    "output_docs": [
+                        {
+                            "id": "doc1",
+                            "title": "2018 FIFA Final",
+                            "content": "France defeated Croatia 4-2."
+                        },
+                        {
+                            "id": "doc2",
+                            "title": "World Cup Summary",
+                            "content": "France crowned world champion 2018."
+                        }
+                    ]
+                },
+                {
+                    "name": "llm_generation",
+                    "model": "gpt-4",
+                    "temperature": 0.2,
+                    "latency_ms": 310,
+                    "token_usage": {
+                        "prompt_tokens": 60,
+                        "completion_tokens": 25
+                    },
+                    "output": "France won the 2018 FIFA World Cup, beating Croatia 4-2."
+                }
+            ],
+            "final_output": "France (2018 FIFA World Cup winner)",
+            "metrics": {
+                "faithfulness": 1.0,
+                "relevance": 0.97,
+                "cost_usd": 0.0025
+            }
+        },
+        {
+            "trace_id": "trace_002",
+            "user_query": "Explain quantum entanglement simply.",
+            "metadata": {
+                "user_id": "u456",
+                "region": "US",
+                "timestamp": "2025-09-24T20:16:00Z"
+            },
+            "steps": [
+                {
+                    "name": "prompt_construction",
+                    "latency_ms": 50,
+                    "input": "Explain quantum entanglement simply.",
+                    "output": "Explain in simple words: quantum entanglement..."
+                },
+                {
+                    "name": "llm_generation",
+                    "model": "gpt-4",
+                    "temperature": 0.7,
+                    "latency_ms": 400,
+                    "token_usage": {
+                        "prompt_tokens": 45,
+                        "completion_tokens": 60
+                    },
+                    "output": "Quantum entanglement is like having two dice that always show the same number..."
+                }
+            ],
+            "final_output": "Quantum entanglement means two particles behave as one, no matter the distance.",
+            "metrics": {
+                "faithfulness": 0.92,
+                "relevance": 0.95,
+                "cost_usd": 0.0038
+            }
+        },
+        {
+            "trace_id": "trace_003",
+            "user_query": "Translate 'Hello World' into French, Spanish, and Italian.",
+            "metadata": {
+                "user_id": "u789",
+                "region": "APAC",
+                "timestamp": "2025-09-24T20:18:00Z"
+            },
+            "steps": [
+                {
+                    "name": "llm_generation",
+                    "model": "gpt-4",
+                    "temperature": 0.0,
+                    "latency_ms": 200,
+                    "token_usage": {
+                        "prompt_tokens": 30,
+                        "completion_tokens": 15
+                    },
+                    "output": {
+                        "fr": "Bonjour le monde",
+                        "es": "Hola mundo",
+                        "it": "Ciao mondo"
+                    }
+                }
+            ],
+            "final_output": {
+                "fr": "Bonjour le monde",
+                "es": "Hola mundo",
+                "it": "Ciao mondo"
+            },
+            "metrics": {
+                "faithfulness": 1.0,
+                "relevance": 1.0,
+                "cost_usd": 0.0012
+            }
+        }
+    ]
+}
