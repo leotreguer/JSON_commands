@@ -1,0 +1,2597 @@
+{
+  "project": "LLM Evaluation Exercise",
+  "version": "1.0",
+  "traces": [
+    {
+      "trace_id": "trace_0001",
+      "user_query": "Who won the 2018 World Cup?",
+      "steps": [
+        {
+          "name": "llm_generation",
+          "latency_ms": 109,
+          "model": "custom-small",
+          "temperature": 0.63,
+          "token_usage": {
+            "prompt_tokens": 19,
+            "completion_tokens": 86
+          }
+        }
+      ],
+      "final_output": "France (2018 FIFA World Cup winner)",
+      "metadata": {
+        "user_id": "u641",
+        "region": "EU",
+        "timestamp": "2025-09-24T21:12:00Z"
+      },
+      "metrics": {
+        "faithfulness": 0.94,
+        "relevance": 0.82,
+        "cost_usd": 0.09
+      }
+    },
+    {
+      "trace_id": "trace_0002",
+      "user_query": "Summarize the plot of Inception in one sentence.",
+      "steps": [
+        {
+          "name": "retrieval",
+          "latency_ms": 270,
+          "model": "custom-small",
+          "temperature": 0.02,
+          "token_usage": {
+            "prompt_tokens": 11,
+            "completion_tokens": 83
+          },
+          "output_docs": [
+            {
+              "doc_id": "doc_2_0_0",
+              "title": "Doc 0",
+              "content": "Random content snippet 524"
+            },
+            {
+              "doc_id": "doc_2_0_1",
+              "title": "Doc 1",
+              "content": "Random content snippet 237"
+            }
+          ]
+        },
+        {
+          "name": "prompt_construction",
+          "latency_ms": 189,
+          "model": "gpt-3.5",
+          "temperature": 0.91,
+          "token_usage": {
+            "prompt_tokens": 28,
+            "completion_tokens": 60
+          }
+        },
+        {
+          "name": "prompt_construction",
+          "latency_ms": 220,
+          "model": "gpt-3.5",
+          "temperature": 0.8,
+          "token_usage": {
+            "prompt_tokens": 39,
+            "completion_tokens": 56
+          }
+        },
+        {
+          "name": "retrieval",
+          "latency_ms": 126,
+          "model": "gpt-3.5",
+          "temperature": 0.9,
+          "token_usage": {
+            "prompt_tokens": 31,
+            "completion_tokens": 81
+          },
+          "output_docs": [
+            {
+              "doc_id": "doc_2_3_0",
+              "title": "Doc 0",
+              "content": "Random content snippet 939"
+            },
+            {
+              "doc_id": "doc_2_3_1",
+              "title": "Doc 1",
+              "content": "Random content snippet 270"
+            },
+            {
+              "doc_id": "doc_2_3_2",
+              "title": "Doc 2",
+              "content": "Random content snippet 676"
+            }
+          ]
+        }
+      ],
+      "final_output": "A thief enters dreams to steal secrets, but plants an idea instead.",
+      "metadata": {
+        "user_id": "u411",
+        "region": "EU",
+        "timestamp": "2025-09-24T21:05:00Z"
+      },
+      "metrics": {
+        "faithfulness": 0.85,
+        "relevance": 0.99,
+        "cost_usd": 0.065
+      }
+    },
+    {
+      "trace_id": "trace_0003",
+      "user_query": "Translate 'Hello World' into French, Spanish, and Italian.",
+      "steps": [
+        {
+          "name": "prompt_construction",
+          "latency_ms": 207,
+          "model": "gpt-3.5",
+          "temperature": 0.12,
+          "token_usage": {
+            "prompt_tokens": 36,
+            "completion_tokens": 83
+          }
+        },
+        {
+          "name": "llm_generation",
+          "latency_ms": 162,
+          "model": "custom-small",
+          "temperature": 0.68,
+          "token_usage": {
+            "prompt_tokens": 30,
+            "completion_tokens": 57
+          }
+        },
+        {
+          "name": "retrieval",
+          "latency_ms": 76,
+          "model": "gpt-3.5",
+          "temperature": 0.35,
+          "token_usage": {
+            "prompt_tokens": 36,
+            "completion_tokens": 99
+          },
+          "output_docs": [
+            {
+              "doc_id": "doc_3_2_0",
+              "title": "Doc 0",
+              "content": "Random content snippet 819"
+            },
+            {
+              "doc_id": "doc_3_2_1",
+              "title": "Doc 1",
+              "content": "Random content snippet 974"
+            }
+          ]
+        },
+        {
+          "name": "retrieval",
+          "latency_ms": 82,
+          "model": "gpt-4",
+          "temperature": 0.01,
+          "token_usage": {
+            "prompt_tokens": 26,
+            "completion_tokens": 58
+          },
+          "output_docs": [
+            {
+              "doc_id": "doc_3_3_0",
+              "title": "Doc 0",
+              "content": "Random content snippet 561"
+            },
+            {
+              "doc_id": "doc_3_3_1",
+              "title": "Doc 1",
+              "content": "Random content snippet 831"
+            },
+            {
+              "doc_id": "doc_3_3_2",
+              "title": "Doc 2",
+              "content": "Random content snippet 767"
+            }
+          ]
+        }
+      ],
+      "final_output": {
+        "fr": "Bonjour le monde",
+        "es": "Hola Mundo",
+        "it": "Ciao Mondo"
+      },
+      "metadata": {
+        "user_id": "u579",
+        "region": "EU",
+        "timestamp": "2025-09-24T20:41:00Z"
+      },
+      "metrics": {
+        "faithfulness": 0.85,
+        "relevance": 0.8,
+        "cost_usd": 0.078
+      }
+    },
+    {
+      "trace_id": "trace_0004",
+      "user_query": "Summarize the plot of Inception in one sentence.",
+      "steps": [
+        {
+          "name": "prompt_construction",
+          "latency_ms": 294,
+          "model": "custom-small",
+          "temperature": 0.34,
+          "token_usage": {
+            "prompt_tokens": 48,
+            "completion_tokens": 98
+          }
+        },
+        {
+          "name": "prompt_construction",
+          "latency_ms": 234,
+          "model": "bert-base",
+          "temperature": 0.98,
+          "token_usage": {
+            "prompt_tokens": 34,
+            "completion_tokens": 39
+          }
+        },
+        {
+          "name": "prompt_construction",
+          "latency_ms": 243,
+          "model": "custom-small",
+          "temperature": 0.54,
+          "token_usage": {
+            "prompt_tokens": 48,
+            "completion_tokens": 87
+          }
+        }
+      ],
+      "final_output": "A thief enters dreams to steal secrets, but plants an idea instead.",
+      "metadata": {
+        "user_id": "u746",
+        "region": "EU",
+        "timestamp": "2025-09-24T21:05:00Z"
+      },
+      "metrics": {
+        "faithfulness": 0.89,
+        "relevance": 0.8,
+        "cost_usd": 0.022
+      }
+    },
+    {
+      "trace_id": "trace_0005",
+      "user_query": "Who won the 2018 World Cup?",
+      "steps": [
+        {
+          "name": "llm_generation",
+          "latency_ms": 272,
+          "model": "custom-small",
+          "temperature": 0.71,
+          "token_usage": {
+            "prompt_tokens": 25,
+            "completion_tokens": 71
+          }
+        }
+      ],
+      "final_output": "France (2018 FIFA World Cup winner)",
+      "metadata": {
+        "user_id": "u193",
+        "region": "APAC",
+        "timestamp": "2025-09-24T21:00:00Z"
+      },
+      "metrics": {
+        "faithfulness": 0.88,
+        "relevance": 0.84,
+        "cost_usd": 0.043
+      }
+    },
+    {
+      "trace_id": "trace_0006",
+      "user_query": "Explain quantum entanglement simply.",
+      "steps": [
+        {
+          "name": "retrieval",
+          "latency_ms": 261,
+          "model": "bert-base",
+          "temperature": 0.8,
+          "token_usage": {
+            "prompt_tokens": 39,
+            "completion_tokens": 86
+          },
+          "output_docs": [
+            {
+              "doc_id": "doc_6_0_0",
+              "title": "Doc 0",
+              "content": "Random content snippet 736"
+            }
+          ]
+        },
+        {
+          "name": "retrieval",
+          "latency_ms": 247,
+          "model": "gpt-3.5",
+          "temperature": 0.19,
+          "token_usage": {
+            "prompt_tokens": 37,
+            "completion_tokens": 59
+          },
+          "output_docs": [
+            {
+              "doc_id": "doc_6_1_0",
+              "title": "Doc 0",
+              "content": "Random content snippet 152"
+            }
+          ]
+        },
+        {
+          "name": "retrieval",
+          "latency_ms": 280,
+          "model": "custom-small",
+          "temperature": 0.38,
+          "token_usage": {
+            "prompt_tokens": 17,
+            "completion_tokens": 48
+          },
+          "output_docs": [
+            {
+              "doc_id": "doc_6_2_0",
+              "title": "Doc 0",
+              "content": "Random content snippet 342"
+            },
+            {
+              "doc_id": "doc_6_2_1",
+              "title": "Doc 1",
+              "content": "Random content snippet 502"
+            },
+            {
+              "doc_id": "doc_6_2_2",
+              "title": "Doc 2",
+              "content": "Random content snippet 578"
+            }
+          ]
+        }
+      ],
+      "final_output": "Some final answer text.",
+      "metadata": {
+        "user_id": "u883",
+        "region": "EU",
+        "timestamp": "2025-09-24T22:06:00Z"
+      },
+      "metrics": {
+        "faithfulness": 0.89,
+        "relevance": 0.83,
+        "cost_usd": 0.072
+      }
+    },
+    {
+      "trace_id": "trace_0007",
+      "user_query": "Who won the 2018 World Cup?",
+      "steps": [
+        {
+          "name": "retrieval",
+          "latency_ms": 80,
+          "model": "gpt-4",
+          "temperature": 0.06,
+          "token_usage": {
+            "prompt_tokens": 20,
+            "completion_tokens": 58
+          },
+          "output_docs": [
+            {
+              "doc_id": "doc_7_0_0",
+              "title": "Doc 0",
+              "content": "Random content snippet 161"
+            },
+            {
+              "doc_id": "doc_7_0_1",
+              "title": "Doc 1",
+              "content": "Random content snippet 881"
+            },
+            {
+              "doc_id": "doc_7_0_2",
+              "title": "Doc 2",
+              "content": "Random content snippet 131"
+            }
+          ]
+        },
+        {
+          "name": "prompt_construction",
+          "latency_ms": 171,
+          "model": "custom-small",
+          "temperature": 0.83,
+          "token_usage": {
+            "prompt_tokens": 39,
+            "completion_tokens": 98
+          }
+        }
+      ],
+      "final_output": "France (2018 FIFA World Cup winner)",
+      "metadata": {
+        "user_id": "u999",
+        "region": "APAC",
+        "timestamp": "2025-09-24T21:00:00Z"
+      },
+      "metrics": {
+        "faithfulness": 0.8,
+        "relevance": 0.84,
+        "cost_usd": 0.055
+      }
+    },
+    {
+      "trace_id": "trace_0008",
+      "user_query": "Summarize the plot of Inception in one sentence.",
+      "steps": [
+        {
+          "name": "retrieval",
+          "latency_ms": 115,
+          "model": "gpt-3.5",
+          "temperature": 0.6,
+          "token_usage": {
+            "prompt_tokens": 46,
+            "completion_tokens": 20
+          },
+          "output_docs": [
+            {
+              "doc_id": "doc_8_0_0",
+              "title": "Doc 0",
+              "content": "Random content snippet 851"
+            },
+            {
+              "doc_id": "doc_8_0_1",
+              "title": "Doc 1",
+              "content": "Random content snippet 813"
+            },
+            {
+              "doc_id": "doc_8_0_2",
+              "title": "Doc 2",
+              "content": "Random content snippet 749"
+            }
+          ]
+        },
+        {
+          "name": "retrieval",
+          "latency_ms": 124,
+          "model": "gpt-3.5",
+          "temperature": 0.02,
+          "token_usage": {
+            "prompt_tokens": 28,
+            "completion_tokens": 93
+          },
+          "output_docs": [
+            {
+              "doc_id": "doc_8_1_0",
+              "title": "Doc 0",
+              "content": "Random content snippet 630"
+            },
+            {
+              "doc_id": "doc_8_1_1",
+              "title": "Doc 1",
+              "content": "Random content snippet 193"
+            },
+            {
+              "doc_id": "doc_8_1_2",
+              "title": "Doc 2",
+              "content": "Random content snippet 785"
+            }
+          ]
+        },
+        {
+          "name": "retrieval",
+          "latency_ms": 256,
+          "model": "custom-small",
+          "temperature": 0.98,
+          "token_usage": {
+            "prompt_tokens": 27,
+            "completion_tokens": 94
+          },
+          "output_docs": [
+            {
+              "doc_id": "doc_8_2_0",
+              "title": "Doc 0",
+              "content": "Random content snippet 583"
+            },
+            {
+              "doc_id": "doc_8_2_1",
+              "title": "Doc 1",
+              "content": "Random content snippet 996"
+            }
+          ]
+        },
+        {
+          "name": "prompt_construction",
+          "latency_ms": 103,
+          "model": "gpt-4",
+          "temperature": 0.38,
+          "token_usage": {
+            "prompt_tokens": 18,
+            "completion_tokens": 24
+          }
+        }
+      ],
+      "final_output": "A thief enters dreams to steal secrets, but plants an idea instead.",
+      "metadata": {
+        "user_id": "u454",
+        "region": "US",
+        "timestamp": "2025-09-24T20:34:00Z"
+      },
+      "metrics": {
+        "faithfulness": 0.86,
+        "relevance": 0.93,
+        "cost_usd": 0.044
+      }
+    },
+    {
+      "trace_id": "trace_0009",
+      "user_query": "What is the capital of Canada?",
+      "steps": [
+        {
+          "name": "prompt_construction",
+          "latency_ms": 229,
+          "model": "gpt-3.5",
+          "temperature": 0.76,
+          "token_usage": {
+            "prompt_tokens": 46,
+            "completion_tokens": 24
+          }
+        }
+      ],
+      "final_output": "Some final answer text.",
+      "metadata": {
+        "user_id": "u901",
+        "region": "US",
+        "timestamp": "2025-09-24T21:11:00Z"
+      },
+      "metrics": {
+        "faithfulness": 0.95,
+        "relevance": 0.95,
+        "cost_usd": 0.034
+      }
+    },
+    {
+      "trace_id": "trace_0010",
+      "user_query": "Explain quantum entanglement simply.",
+      "steps": [
+        {
+          "name": "llm_generation",
+          "latency_ms": 228,
+          "model": "gpt-4",
+          "temperature": 0.67,
+          "token_usage": {
+            "prompt_tokens": 43,
+            "completion_tokens": 29
+          }
+        }
+      ],
+      "final_output": "Some final answer text.",
+      "metadata": {
+        "user_id": "u106",
+        "region": "US",
+        "timestamp": "2025-09-24T20:47:00Z"
+      },
+      "metrics": {
+        "faithfulness": 0.92,
+        "relevance": 0.81,
+        "cost_usd": 0.036
+      }
+    },
+    {
+      "trace_id": "trace_0011",
+      "user_query": "Translate 'Hello World' into French, Spanish, and Italian.",
+      "steps": [
+        {
+          "name": "retrieval",
+          "latency_ms": 149,
+          "model": "bert-base",
+          "temperature": 0.5,
+          "token_usage": {
+            "prompt_tokens": 50,
+            "completion_tokens": 46
+          },
+          "output_docs": [
+            {
+              "doc_id": "doc_11_0_0",
+              "title": "Doc 0",
+              "content": "Random content snippet 550"
+            },
+            {
+              "doc_id": "doc_11_0_1",
+              "title": "Doc 1",
+              "content": "Random content snippet 557"
+            },
+            {
+              "doc_id": "doc_11_0_2",
+              "title": "Doc 2",
+              "content": "Random content snippet 864"
+            }
+          ]
+        }
+      ],
+      "final_output": {
+        "fr": "Bonjour le monde",
+        "es": "Hola Mundo",
+        "it": "Ciao Mondo"
+      },
+      "metadata": {
+        "user_id": "u289",
+        "region": "US",
+        "timestamp": "2025-09-24T21:44:00Z"
+      },
+      "metrics": {
+        "faithfulness": 0.89,
+        "relevance": 0.81,
+        "cost_usd": 0.015
+      }
+    },
+    {
+      "trace_id": "trace_0012",
+      "user_query": "What is the capital of Canada?",
+      "steps": [
+        {
+          "name": "llm_generation",
+          "latency_ms": 211,
+          "model": "bert-base",
+          "temperature": 0.06,
+          "token_usage": {
+            "prompt_tokens": 10,
+            "completion_tokens": 58
+          }
+        }
+      ],
+      "final_output": "Some final answer text.",
+      "metadata": {
+        "user_id": "u278",
+        "region": "EU",
+        "timestamp": "2025-09-24T21:32:00Z"
+      },
+      "metrics": {
+        "faithfulness": 0.96,
+        "relevance": 0.98,
+        "cost_usd": 0.09
+      }
+    },
+    {
+      "trace_id": "trace_0013",
+      "user_query": "What is the capital of Canada?",
+      "steps": [
+        {
+          "name": "prompt_construction",
+          "latency_ms": 246,
+          "model": "custom-small",
+          "temperature": 0.97,
+          "token_usage": {
+            "prompt_tokens": 43,
+            "completion_tokens": 58
+          }
+        }
+      ],
+      "final_output": "Some final answer text.",
+      "metadata": {
+        "user_id": "u566",
+        "region": "US",
+        "timestamp": "2025-09-24T21:19:00Z"
+      },
+      "metrics": {
+        "faithfulness": 0.87,
+        "relevance": 0.97,
+        "cost_usd": 0.026
+      }
+    },
+    {
+      "trace_id": "trace_0014",
+      "user_query": "Summarize the plot of Inception in one sentence.",
+      "steps": [
+        {
+          "name": "llm_generation",
+          "latency_ms": 97,
+          "model": "gpt-3.5",
+          "temperature": 0.23,
+          "token_usage": {
+            "prompt_tokens": 46,
+            "completion_tokens": 44
+          }
+        },
+        {
+          "name": "llm_generation",
+          "latency_ms": 130,
+          "model": "gpt-3.5",
+          "temperature": 0.55,
+          "token_usage": {
+            "prompt_tokens": 19,
+            "completion_tokens": 84
+          }
+        },
+        {
+          "name": "prompt_construction",
+          "latency_ms": 122,
+          "model": "gpt-4",
+          "temperature": 0.4,
+          "token_usage": {
+            "prompt_tokens": 42,
+            "completion_tokens": 57
+          }
+        },
+        {
+          "name": "prompt_construction",
+          "latency_ms": 114,
+          "model": "gpt-4",
+          "temperature": 0.32,
+          "token_usage": {
+            "prompt_tokens": 30,
+            "completion_tokens": 70
+          }
+        }
+      ],
+      "final_output": "A thief enters dreams to steal secrets, but plants an idea instead.",
+      "metadata": {
+        "user_id": "u192",
+        "region": "US",
+        "timestamp": "2025-09-24T21:22:00Z"
+      },
+      "metrics": {
+        "faithfulness": 0.81,
+        "relevance": 0.87,
+        "cost_usd": 0.063
+      }
+    },
+    {
+      "trace_id": "trace_0015",
+      "user_query": "Summarize the plot of Inception in one sentence.",
+      "steps": [
+        {
+          "name": "llm_generation",
+          "latency_ms": 87,
+          "model": "bert-base",
+          "temperature": 0.46,
+          "token_usage": {
+            "prompt_tokens": 15,
+            "completion_tokens": 73
+          }
+        }
+      ],
+      "final_output": "A thief enters dreams to steal secrets, but plants an idea instead.",
+      "metadata": {
+        "user_id": "u538",
+        "region": "APAC",
+        "timestamp": "2025-09-24T20:34:00Z"
+      },
+      "metrics": {
+        "faithfulness": 0.94,
+        "relevance": 0.96,
+        "cost_usd": 0.074
+      }
+    },
+    {
+      "trace_id": "trace_0016",
+      "user_query": "What is the capital of Canada?",
+      "steps": [
+        {
+          "name": "prompt_construction",
+          "latency_ms": 166,
+          "model": "gpt-4",
+          "temperature": 0.35,
+          "token_usage": {
+            "prompt_tokens": 29,
+            "completion_tokens": 49
+          }
+        },
+        {
+          "name": "llm_generation",
+          "latency_ms": 107,
+          "model": "gpt-3.5",
+          "temperature": 0.93,
+          "token_usage": {
+            "prompt_tokens": 39,
+            "completion_tokens": 38
+          }
+        },
+        {
+          "name": "llm_generation",
+          "latency_ms": 171,
+          "model": "gpt-4",
+          "temperature": 0.11,
+          "token_usage": {
+            "prompt_tokens": 49,
+            "completion_tokens": 28
+          }
+        },
+        {
+          "name": "prompt_construction",
+          "latency_ms": 59,
+          "model": "custom-small",
+          "temperature": 0.31,
+          "token_usage": {
+            "prompt_tokens": 29,
+            "completion_tokens": 68
+          }
+        }
+      ],
+      "final_output": "Some final answer text.",
+      "metadata": {
+        "user_id": "u936",
+        "region": "APAC",
+        "timestamp": "2025-09-24T20:57:00Z"
+      },
+      "metrics": {
+        "faithfulness": 1.0,
+        "relevance": 0.96,
+        "cost_usd": 0.026
+      }
+    },
+    {
+      "trace_id": "trace_0017",
+      "user_query": "Who won the 2018 World Cup?",
+      "steps": [
+        {
+          "name": "llm_generation",
+          "latency_ms": 168,
+          "model": "gpt-3.5",
+          "temperature": 0.93,
+          "token_usage": {
+            "prompt_tokens": 28,
+            "completion_tokens": 21
+          }
+        }
+      ],
+      "final_output": "France (2018 FIFA World Cup winner)",
+      "metadata": {
+        "user_id": "u479",
+        "region": "APAC",
+        "timestamp": "2025-09-24T20:59:00Z"
+      },
+      "metrics": {
+        "faithfulness": 0.89,
+        "relevance": 0.97,
+        "cost_usd": 0.037
+      }
+    },
+    {
+      "trace_id": "trace_0018",
+      "user_query": "What is the capital of Canada?",
+      "steps": [
+        {
+          "name": "llm_generation",
+          "latency_ms": 275,
+          "model": "gpt-3.5",
+          "temperature": 0.83,
+          "token_usage": {
+            "prompt_tokens": 50,
+            "completion_tokens": 96
+          }
+        },
+        {
+          "name": "llm_generation",
+          "latency_ms": 94,
+          "model": "custom-small",
+          "temperature": 0.03,
+          "token_usage": {
+            "prompt_tokens": 48,
+            "completion_tokens": 43
+          }
+        }
+      ],
+      "final_output": "Some final answer text.",
+      "metadata": {
+        "user_id": "u437",
+        "region": "APAC",
+        "timestamp": "2025-09-24T20:19:00Z"
+      },
+      "metrics": {
+        "faithfulness": 0.91,
+        "relevance": 0.81,
+        "cost_usd": 0.033
+      }
+    },
+    {
+      "trace_id": "trace_0019",
+      "user_query": "Who won the 2018 World Cup?",
+      "steps": [
+        {
+          "name": "retrieval",
+          "latency_ms": 209,
+          "model": "gpt-3.5",
+          "temperature": 0.38,
+          "token_usage": {
+            "prompt_tokens": 24,
+            "completion_tokens": 28
+          },
+          "output_docs": [
+            {
+              "doc_id": "doc_19_0_0",
+              "title": "Doc 0",
+              "content": "Random content snippet 518"
+            }
+          ]
+        }
+      ],
+      "final_output": "France (2018 FIFA World Cup winner)",
+      "metadata": {
+        "user_id": "u985",
+        "region": "US",
+        "timestamp": "2025-09-24T21:38:00Z"
+      },
+      "metrics": {
+        "faithfulness": 0.96,
+        "relevance": 0.99,
+        "cost_usd": 0.024
+      }
+    },
+    {
+      "trace_id": "trace_0020",
+      "user_query": "Summarize the plot of Inception in one sentence.",
+      "steps": [
+        {
+          "name": "llm_generation",
+          "latency_ms": 292,
+          "model": "custom-small",
+          "temperature": 0.2,
+          "token_usage": {
+            "prompt_tokens": 41,
+            "completion_tokens": 75
+          }
+        },
+        {
+          "name": "llm_generation",
+          "latency_ms": 173,
+          "model": "gpt-4",
+          "temperature": 0.58,
+          "token_usage": {
+            "prompt_tokens": 36,
+            "completion_tokens": 27
+          }
+        },
+        {
+          "name": "prompt_construction",
+          "latency_ms": 280,
+          "model": "custom-small",
+          "temperature": 0.19,
+          "token_usage": {
+            "prompt_tokens": 18,
+            "completion_tokens": 29
+          }
+        },
+        {
+          "name": "prompt_construction",
+          "latency_ms": 57,
+          "model": "custom-small",
+          "temperature": 0.27,
+          "token_usage": {
+            "prompt_tokens": 34,
+            "completion_tokens": 63
+          }
+        }
+      ],
+      "final_output": "A thief enters dreams to steal secrets, but plants an idea instead.",
+      "metadata": {
+        "user_id": "u385",
+        "region": "EU",
+        "timestamp": "2025-09-24T20:50:00Z"
+      },
+      "metrics": {
+        "faithfulness": 0.89,
+        "relevance": 1.0,
+        "cost_usd": 0.073
+      }
+    },
+    {
+      "trace_id": "trace_0021",
+      "user_query": "Who won the 2018 World Cup?",
+      "steps": [
+        {
+          "name": "prompt_construction",
+          "latency_ms": 273,
+          "model": "gpt-3.5",
+          "temperature": 0.19,
+          "token_usage": {
+            "prompt_tokens": 33,
+            "completion_tokens": 22
+          }
+        },
+        {
+          "name": "prompt_construction",
+          "latency_ms": 238,
+          "model": "bert-base",
+          "temperature": 0.38,
+          "token_usage": {
+            "prompt_tokens": 11,
+            "completion_tokens": 91
+          }
+        },
+        {
+          "name": "prompt_construction",
+          "latency_ms": 142,
+          "model": "gpt-3.5",
+          "temperature": 0.95,
+          "token_usage": {
+            "prompt_tokens": 47,
+            "completion_tokens": 55
+          }
+        },
+        {
+          "name": "retrieval",
+          "latency_ms": 221,
+          "model": "custom-small",
+          "temperature": 0.89,
+          "token_usage": {
+            "prompt_tokens": 49,
+            "completion_tokens": 76
+          },
+          "output_docs": [
+            {
+              "doc_id": "doc_21_3_0",
+              "title": "Doc 0",
+              "content": "Random content snippet 337"
+            },
+            {
+              "doc_id": "doc_21_3_1",
+              "title": "Doc 1",
+              "content": "Random content snippet 874"
+            }
+          ]
+        }
+      ],
+      "final_output": "France (2018 FIFA World Cup winner)",
+      "metadata": {
+        "user_id": "u884",
+        "region": "APAC",
+        "timestamp": "2025-09-24T21:29:00Z"
+      },
+      "metrics": {
+        "faithfulness": 0.91,
+        "relevance": 0.92,
+        "cost_usd": 0.089
+      }
+    },
+    {
+      "trace_id": "trace_0022",
+      "user_query": "Explain quantum entanglement simply.",
+      "steps": [
+        {
+          "name": "prompt_construction",
+          "latency_ms": 199,
+          "model": "bert-base",
+          "temperature": 0.11,
+          "token_usage": {
+            "prompt_tokens": 31,
+            "completion_tokens": 48
+          }
+        }
+      ],
+      "final_output": "Some final answer text.",
+      "metadata": {
+        "user_id": "u480",
+        "region": "US",
+        "timestamp": "2025-09-24T20:33:00Z"
+      },
+      "metrics": {
+        "faithfulness": 0.96,
+        "relevance": 0.82,
+        "cost_usd": 0.053
+      }
+    },
+    {
+      "trace_id": "trace_0023",
+      "user_query": "Who won the 2018 World Cup?",
+      "steps": [
+        {
+          "name": "retrieval",
+          "latency_ms": 136,
+          "model": "gpt-3.5",
+          "temperature": 0.69,
+          "token_usage": {
+            "prompt_tokens": 25,
+            "completion_tokens": 28
+          },
+          "output_docs": [
+            {
+              "doc_id": "doc_23_0_0",
+              "title": "Doc 0",
+              "content": "Random content snippet 360"
+            },
+            {
+              "doc_id": "doc_23_0_1",
+              "title": "Doc 1",
+              "content": "Random content snippet 127"
+            },
+            {
+              "doc_id": "doc_23_0_2",
+              "title": "Doc 2",
+              "content": "Random content snippet 985"
+            }
+          ]
+        },
+        {
+          "name": "retrieval",
+          "latency_ms": 191,
+          "model": "bert-base",
+          "temperature": 0.3,
+          "token_usage": {
+            "prompt_tokens": 50,
+            "completion_tokens": 80
+          },
+          "output_docs": [
+            {
+              "doc_id": "doc_23_1_0",
+              "title": "Doc 0",
+              "content": "Random content snippet 482"
+            }
+          ]
+        },
+        {
+          "name": "prompt_construction",
+          "latency_ms": 229,
+          "model": "bert-base",
+          "temperature": 0.63,
+          "token_usage": {
+            "prompt_tokens": 23,
+            "completion_tokens": 24
+          }
+        }
+      ],
+      "final_output": "France (2018 FIFA World Cup winner)",
+      "metadata": {
+        "user_id": "u845",
+        "region": "US",
+        "timestamp": "2025-09-24T20:34:00Z"
+      },
+      "metrics": {
+        "faithfulness": 0.98,
+        "relevance": 0.88,
+        "cost_usd": 0.014
+      }
+    },
+    {
+      "trace_id": "trace_0024",
+      "user_query": "Who won the 2018 World Cup?",
+      "steps": [
+        {
+          "name": "retrieval",
+          "latency_ms": 268,
+          "model": "gpt-4",
+          "temperature": 0.35,
+          "token_usage": {
+            "prompt_tokens": 29,
+            "completion_tokens": 67
+          },
+          "output_docs": [
+            {
+              "doc_id": "doc_24_0_0",
+              "title": "Doc 0",
+              "content": "Random content snippet 882"
+            }
+          ]
+        },
+        {
+          "name": "llm_generation",
+          "latency_ms": 227,
+          "model": "bert-base",
+          "temperature": 0.13,
+          "token_usage": {
+            "prompt_tokens": 47,
+            "completion_tokens": 84
+          }
+        },
+        {
+          "name": "prompt_construction",
+          "latency_ms": 74,
+          "model": "gpt-4",
+          "temperature": 0.2,
+          "token_usage": {
+            "prompt_tokens": 20,
+            "completion_tokens": 37
+          }
+        },
+        {
+          "name": "retrieval",
+          "latency_ms": 220,
+          "model": "custom-small",
+          "temperature": 0.8,
+          "token_usage": {
+            "prompt_tokens": 36,
+            "completion_tokens": 41
+          },
+          "output_docs": [
+            {
+              "doc_id": "doc_24_3_0",
+              "title": "Doc 0",
+              "content": "Random content snippet 334"
+            }
+          ]
+        }
+      ],
+      "final_output": "France (2018 FIFA World Cup winner)",
+      "metadata": {
+        "user_id": "u763",
+        "region": "EU",
+        "timestamp": "2025-09-24T20:52:00Z"
+      },
+      "metrics": {
+        "faithfulness": 0.88,
+        "relevance": 0.8,
+        "cost_usd": 0.032
+      }
+    },
+    {
+      "trace_id": "trace_0025",
+      "user_query": "Explain quantum entanglement simply.",
+      "steps": [
+        {
+          "name": "retrieval",
+          "latency_ms": 190,
+          "model": "gpt-3.5",
+          "temperature": 0.24,
+          "token_usage": {
+            "prompt_tokens": 42,
+            "completion_tokens": 72
+          },
+          "output_docs": [
+            {
+              "doc_id": "doc_25_0_0",
+              "title": "Doc 0",
+              "content": "Random content snippet 172"
+            },
+            {
+              "doc_id": "doc_25_0_1",
+              "title": "Doc 1",
+              "content": "Random content snippet 629"
+            },
+            {
+              "doc_id": "doc_25_0_2",
+              "title": "Doc 2",
+              "content": "Random content snippet 785"
+            }
+          ]
+        },
+        {
+          "name": "prompt_construction",
+          "latency_ms": 242,
+          "model": "bert-base",
+          "temperature": 0.13,
+          "token_usage": {
+            "prompt_tokens": 36,
+            "completion_tokens": 80
+          }
+        },
+        {
+          "name": "prompt_construction",
+          "latency_ms": 181,
+          "model": "gpt-4",
+          "temperature": 0.44,
+          "token_usage": {
+            "prompt_tokens": 49,
+            "completion_tokens": 73
+          }
+        },
+        {
+          "name": "retrieval",
+          "latency_ms": 239,
+          "model": "bert-base",
+          "temperature": 0.0,
+          "token_usage": {
+            "prompt_tokens": 23,
+            "completion_tokens": 42
+          },
+          "output_docs": [
+            {
+              "doc_id": "doc_25_3_0",
+              "title": "Doc 0",
+              "content": "Random content snippet 230"
+            },
+            {
+              "doc_id": "doc_25_3_1",
+              "title": "Doc 1",
+              "content": "Random content snippet 271"
+            }
+          ]
+        }
+      ],
+      "final_output": "Some final answer text.",
+      "metadata": {
+        "user_id": "u226",
+        "region": "APAC",
+        "timestamp": "2025-09-24T21:17:00Z"
+      },
+      "metrics": {
+        "faithfulness": 0.98,
+        "relevance": 0.93,
+        "cost_usd": 0.085
+      }
+    },
+    {
+      "trace_id": "trace_0026",
+      "user_query": "Summarize the plot of Inception in one sentence.",
+      "steps": [
+        {
+          "name": "retrieval",
+          "latency_ms": 259,
+          "model": "gpt-4",
+          "temperature": 0.09,
+          "token_usage": {
+            "prompt_tokens": 27,
+            "completion_tokens": 30
+          },
+          "output_docs": [
+            {
+              "doc_id": "doc_26_0_0",
+              "title": "Doc 0",
+              "content": "Random content snippet 828"
+            }
+          ]
+        }
+      ],
+      "final_output": "A thief enters dreams to steal secrets, but plants an idea instead.",
+      "metadata": {
+        "user_id": "u257",
+        "region": "APAC",
+        "timestamp": "2025-09-24T20:22:00Z"
+      },
+      "metrics": {
+        "faithfulness": 0.94,
+        "relevance": 0.87,
+        "cost_usd": 0.092
+      }
+    },
+    {
+      "trace_id": "trace_0027",
+      "user_query": "Summarize the plot of Inception in one sentence.",
+      "steps": [
+        {
+          "name": "retrieval",
+          "latency_ms": 103,
+          "model": "custom-small",
+          "temperature": 0.69,
+          "token_usage": {
+            "prompt_tokens": 47,
+            "completion_tokens": 52
+          },
+          "output_docs": [
+            {
+              "doc_id": "doc_27_0_0",
+              "title": "Doc 0",
+              "content": "Random content snippet 773"
+            },
+            {
+              "doc_id": "doc_27_0_1",
+              "title": "Doc 1",
+              "content": "Random content snippet 715"
+            },
+            {
+              "doc_id": "doc_27_0_2",
+              "title": "Doc 2",
+              "content": "Random content snippet 291"
+            }
+          ]
+        },
+        {
+          "name": "llm_generation",
+          "latency_ms": 190,
+          "model": "gpt-4",
+          "temperature": 0.26,
+          "token_usage": {
+            "prompt_tokens": 18,
+            "completion_tokens": 47
+          }
+        },
+        {
+          "name": "prompt_construction",
+          "latency_ms": 104,
+          "model": "gpt-4",
+          "temperature": 0.38,
+          "token_usage": {
+            "prompt_tokens": 30,
+            "completion_tokens": 26
+          }
+        },
+        {
+          "name": "retrieval",
+          "latency_ms": 96,
+          "model": "gpt-3.5",
+          "temperature": 0.22,
+          "token_usage": {
+            "prompt_tokens": 40,
+            "completion_tokens": 67
+          },
+          "output_docs": [
+            {
+              "doc_id": "doc_27_3_0",
+              "title": "Doc 0",
+              "content": "Random content snippet 336"
+            },
+            {
+              "doc_id": "doc_27_3_1",
+              "title": "Doc 1",
+              "content": "Random content snippet 640"
+            },
+            {
+              "doc_id": "doc_27_3_2",
+              "title": "Doc 2",
+              "content": "Random content snippet 980"
+            }
+          ]
+        }
+      ],
+      "final_output": "A thief enters dreams to steal secrets, but plants an idea instead.",
+      "metadata": {
+        "user_id": "u625",
+        "region": "US",
+        "timestamp": "2025-09-24T21:37:00Z"
+      },
+      "metrics": {
+        "faithfulness": 0.91,
+        "relevance": 0.92,
+        "cost_usd": 0.035
+      }
+    },
+    {
+      "trace_id": "trace_0028",
+      "user_query": "Summarize the plot of Inception in one sentence.",
+      "steps": [
+        {
+          "name": "prompt_construction",
+          "latency_ms": 147,
+          "model": "custom-small",
+          "temperature": 0.84,
+          "token_usage": {
+            "prompt_tokens": 44,
+            "completion_tokens": 89
+          }
+        },
+        {
+          "name": "retrieval",
+          "latency_ms": 274,
+          "model": "gpt-3.5",
+          "temperature": 0.04,
+          "token_usage": {
+            "prompt_tokens": 28,
+            "completion_tokens": 27
+          },
+          "output_docs": [
+            {
+              "doc_id": "doc_28_1_0",
+              "title": "Doc 0",
+              "content": "Random content snippet 265"
+            },
+            {
+              "doc_id": "doc_28_1_1",
+              "title": "Doc 1",
+              "content": "Random content snippet 485"
+            },
+            {
+              "doc_id": "doc_28_1_2",
+              "title": "Doc 2",
+              "content": "Random content snippet 317"
+            }
+          ]
+        },
+        {
+          "name": "llm_generation",
+          "latency_ms": 142,
+          "model": "custom-small",
+          "temperature": 0.91,
+          "token_usage": {
+            "prompt_tokens": 13,
+            "completion_tokens": 81
+          }
+        },
+        {
+          "name": "prompt_construction",
+          "latency_ms": 75,
+          "model": "custom-small",
+          "temperature": 0.09,
+          "token_usage": {
+            "prompt_tokens": 37,
+            "completion_tokens": 64
+          }
+        }
+      ],
+      "final_output": "A thief enters dreams to steal secrets, but plants an idea instead.",
+      "metadata": {
+        "user_id": "u428",
+        "region": "APAC",
+        "timestamp": "2025-09-24T22:00:00Z"
+      },
+      "metrics": {
+        "faithfulness": 0.86,
+        "relevance": 0.98,
+        "cost_usd": 0.017
+      }
+    },
+    {
+      "trace_id": "trace_0029",
+      "user_query": "Who won the 2018 World Cup?",
+      "steps": [
+        {
+          "name": "retrieval",
+          "latency_ms": 89,
+          "model": "gpt-3.5",
+          "temperature": 0.15,
+          "token_usage": {
+            "prompt_tokens": 45,
+            "completion_tokens": 88
+          },
+          "output_docs": [
+            {
+              "doc_id": "doc_29_0_0",
+              "title": "Doc 0",
+              "content": "Random content snippet 579"
+            }
+          ]
+        }
+      ],
+      "final_output": "France (2018 FIFA World Cup winner)",
+      "metadata": {
+        "user_id": "u463",
+        "region": "EU",
+        "timestamp": "2025-09-24T21:14:00Z"
+      },
+      "metrics": {
+        "faithfulness": 0.92,
+        "relevance": 0.82,
+        "cost_usd": 0.067
+      }
+    },
+    {
+      "trace_id": "trace_0030",
+      "user_query": "What is the capital of Canada?",
+      "steps": [
+        {
+          "name": "prompt_construction",
+          "latency_ms": 276,
+          "model": "bert-base",
+          "temperature": 0.46,
+          "token_usage": {
+            "prompt_tokens": 44,
+            "completion_tokens": 28
+          }
+        },
+        {
+          "name": "prompt_construction",
+          "latency_ms": 238,
+          "model": "custom-small",
+          "temperature": 0.27,
+          "token_usage": {
+            "prompt_tokens": 10,
+            "completion_tokens": 30
+          }
+        }
+      ],
+      "final_output": "Some final answer text.",
+      "metadata": {
+        "user_id": "u348",
+        "region": "APAC",
+        "timestamp": "2025-09-24T20:59:00Z"
+      },
+      "metrics": {
+        "faithfulness": 0.98,
+        "relevance": 0.89,
+        "cost_usd": 0.099
+      }
+    },
+    {
+      "trace_id": "trace_0031",
+      "user_query": "Translate 'Hello World' into French, Spanish, and Italian.",
+      "steps": [
+        {
+          "name": "llm_generation",
+          "latency_ms": 270,
+          "model": "bert-base",
+          "temperature": 0.07,
+          "token_usage": {
+            "prompt_tokens": 28,
+            "completion_tokens": 49
+          }
+        },
+        {
+          "name": "prompt_construction",
+          "latency_ms": 244,
+          "model": "custom-small",
+          "temperature": 0.24,
+          "token_usage": {
+            "prompt_tokens": 48,
+            "completion_tokens": 57
+          }
+        },
+        {
+          "name": "prompt_construction",
+          "latency_ms": 241,
+          "model": "gpt-3.5",
+          "temperature": 0.62,
+          "token_usage": {
+            "prompt_tokens": 19,
+            "completion_tokens": 54
+          }
+        }
+      ],
+      "final_output": {
+        "fr": "Bonjour le monde",
+        "es": "Hola Mundo",
+        "it": "Ciao Mondo"
+      },
+      "metadata": {
+        "user_id": "u508",
+        "region": "EU",
+        "timestamp": "2025-09-24T21:41:00Z"
+      },
+      "metrics": {
+        "faithfulness": 0.9,
+        "relevance": 0.99,
+        "cost_usd": 0.079
+      }
+    },
+    {
+      "trace_id": "trace_0032",
+      "user_query": "Summarize the plot of Inception in one sentence.",
+      "steps": [
+        {
+          "name": "retrieval",
+          "latency_ms": 291,
+          "model": "bert-base",
+          "temperature": 0.76,
+          "token_usage": {
+            "prompt_tokens": 25,
+            "completion_tokens": 39
+          },
+          "output_docs": [
+            {
+              "doc_id": "doc_32_0_0",
+              "title": "Doc 0",
+              "content": "Random content snippet 936"
+            },
+            {
+              "doc_id": "doc_32_0_1",
+              "title": "Doc 1",
+              "content": "Random content snippet 256"
+            }
+          ]
+        },
+        {
+          "name": "prompt_construction",
+          "latency_ms": 264,
+          "model": "gpt-4",
+          "temperature": 0.73,
+          "token_usage": {
+            "prompt_tokens": 28,
+            "completion_tokens": 98
+          }
+        },
+        {
+          "name": "llm_generation",
+          "latency_ms": 182,
+          "model": "custom-small",
+          "temperature": 0.8,
+          "token_usage": {
+            "prompt_tokens": 32,
+            "completion_tokens": 28
+          }
+        }
+      ],
+      "final_output": "A thief enters dreams to steal secrets, but plants an idea instead.",
+      "metadata": {
+        "user_id": "u742",
+        "region": "APAC",
+        "timestamp": "2025-09-24T20:59:00Z"
+      },
+      "metrics": {
+        "faithfulness": 0.86,
+        "relevance": 0.93,
+        "cost_usd": 0.03
+      }
+    },
+    {
+      "trace_id": "trace_0033",
+      "user_query": "Who won the 2018 World Cup?",
+      "steps": [
+        {
+          "name": "retrieval",
+          "latency_ms": 185,
+          "model": "gpt-4",
+          "temperature": 0.12,
+          "token_usage": {
+            "prompt_tokens": 33,
+            "completion_tokens": 66
+          },
+          "output_docs": [
+            {
+              "doc_id": "doc_33_0_0",
+              "title": "Doc 0",
+              "content": "Random content snippet 267"
+            },
+            {
+              "doc_id": "doc_33_0_1",
+              "title": "Doc 1",
+              "content": "Random content snippet 114"
+            },
+            {
+              "doc_id": "doc_33_0_2",
+              "title": "Doc 2",
+              "content": "Random content snippet 776"
+            }
+          ]
+        }
+      ],
+      "final_output": "France (2018 FIFA World Cup winner)",
+      "metadata": {
+        "user_id": "u664",
+        "region": "US",
+        "timestamp": "2025-09-24T20:18:00Z"
+      },
+      "metrics": {
+        "faithfulness": 0.84,
+        "relevance": 0.81,
+        "cost_usd": 0.028
+      }
+    },
+    {
+      "trace_id": "trace_0034",
+      "user_query": "Summarize the plot of Inception in one sentence.",
+      "steps": [
+        {
+          "name": "prompt_construction",
+          "latency_ms": 233,
+          "model": "bert-base",
+          "temperature": 0.88,
+          "token_usage": {
+            "prompt_tokens": 14,
+            "completion_tokens": 36
+          }
+        },
+        {
+          "name": "llm_generation",
+          "latency_ms": 199,
+          "model": "custom-small",
+          "temperature": 0.96,
+          "token_usage": {
+            "prompt_tokens": 46,
+            "completion_tokens": 36
+          }
+        },
+        {
+          "name": "llm_generation",
+          "latency_ms": 144,
+          "model": "bert-base",
+          "temperature": 0.0,
+          "token_usage": {
+            "prompt_tokens": 16,
+            "completion_tokens": 76
+          }
+        },
+        {
+          "name": "llm_generation",
+          "latency_ms": 146,
+          "model": "bert-base",
+          "temperature": 0.12,
+          "token_usage": {
+            "prompt_tokens": 24,
+            "completion_tokens": 62
+          }
+        }
+      ],
+      "final_output": "A thief enters dreams to steal secrets, but plants an idea instead.",
+      "metadata": {
+        "user_id": "u360",
+        "region": "EU",
+        "timestamp": "2025-09-24T20:16:00Z"
+      },
+      "metrics": {
+        "faithfulness": 0.88,
+        "relevance": 0.87,
+        "cost_usd": 0.018
+      }
+    },
+    {
+      "trace_id": "trace_0035",
+      "user_query": "Who won the 2018 World Cup?",
+      "steps": [
+        {
+          "name": "prompt_construction",
+          "latency_ms": 63,
+          "model": "custom-small",
+          "temperature": 0.54,
+          "token_usage": {
+            "prompt_tokens": 10,
+            "completion_tokens": 68
+          }
+        },
+        {
+          "name": "retrieval",
+          "latency_ms": 147,
+          "model": "gpt-3.5",
+          "temperature": 0.07,
+          "token_usage": {
+            "prompt_tokens": 30,
+            "completion_tokens": 96
+          },
+          "output_docs": [
+            {
+              "doc_id": "doc_35_1_0",
+              "title": "Doc 0",
+              "content": "Random content snippet 646"
+            }
+          ]
+        }
+      ],
+      "final_output": "France (2018 FIFA World Cup winner)",
+      "metadata": {
+        "user_id": "u744",
+        "region": "APAC",
+        "timestamp": "2025-09-24T20:27:00Z"
+      },
+      "metrics": {
+        "faithfulness": 0.92,
+        "relevance": 0.99,
+        "cost_usd": 0.074
+      }
+    },
+    {
+      "trace_id": "trace_0036",
+      "user_query": "Explain quantum entanglement simply.",
+      "steps": [
+        {
+          "name": "retrieval",
+          "latency_ms": 174,
+          "model": "custom-small",
+          "temperature": 0.36,
+          "token_usage": {
+            "prompt_tokens": 20,
+            "completion_tokens": 64
+          },
+          "output_docs": [
+            {
+              "doc_id": "doc_36_0_0",
+              "title": "Doc 0",
+              "content": "Random content snippet 261"
+            },
+            {
+              "doc_id": "doc_36_0_1",
+              "title": "Doc 1",
+              "content": "Random content snippet 544"
+            }
+          ]
+        }
+      ],
+      "final_output": "Some final answer text.",
+      "metadata": {
+        "user_id": "u946",
+        "region": "APAC",
+        "timestamp": "2025-09-24T21:51:00Z"
+      },
+      "metrics": {
+        "faithfulness": 0.92,
+        "relevance": 0.81,
+        "cost_usd": 0.015
+      }
+    },
+    {
+      "trace_id": "trace_0037",
+      "user_query": "Translate 'Hello World' into French, Spanish, and Italian.",
+      "steps": [
+        {
+          "name": "retrieval",
+          "latency_ms": 262,
+          "model": "bert-base",
+          "temperature": 0.42,
+          "token_usage": {
+            "prompt_tokens": 45,
+            "completion_tokens": 40
+          },
+          "output_docs": [
+            {
+              "doc_id": "doc_37_0_0",
+              "title": "Doc 0",
+              "content": "Random content snippet 724"
+            }
+          ]
+        },
+        {
+          "name": "llm_generation",
+          "latency_ms": 119,
+          "model": "gpt-3.5",
+          "temperature": 0.96,
+          "token_usage": {
+            "prompt_tokens": 48,
+            "completion_tokens": 48
+          }
+        },
+        {
+          "name": "llm_generation",
+          "latency_ms": 238,
+          "model": "custom-small",
+          "temperature": 0.54,
+          "token_usage": {
+            "prompt_tokens": 46,
+            "completion_tokens": 93
+          }
+        },
+        {
+          "name": "llm_generation",
+          "latency_ms": 115,
+          "model": "bert-base",
+          "temperature": 0.2,
+          "token_usage": {
+            "prompt_tokens": 21,
+            "completion_tokens": 61
+          }
+        }
+      ],
+      "final_output": {
+        "fr": "Bonjour le monde",
+        "es": "Hola Mundo",
+        "it": "Ciao Mondo"
+      },
+      "metadata": {
+        "user_id": "u920",
+        "region": "EU",
+        "timestamp": "2025-09-24T21:36:00Z"
+      },
+      "metrics": {
+        "faithfulness": 0.98,
+        "relevance": 0.88,
+        "cost_usd": 0.049
+      }
+    },
+    {
+      "trace_id": "trace_0038",
+      "user_query": "Who won the 2018 World Cup?",
+      "steps": [
+        {
+          "name": "retrieval",
+          "latency_ms": 199,
+          "model": "bert-base",
+          "temperature": 0.59,
+          "token_usage": {
+            "prompt_tokens": 31,
+            "completion_tokens": 62
+          },
+          "output_docs": [
+            {
+              "doc_id": "doc_38_0_0",
+              "title": "Doc 0",
+              "content": "Random content snippet 283"
+            },
+            {
+              "doc_id": "doc_38_0_1",
+              "title": "Doc 1",
+              "content": "Random content snippet 606"
+            },
+            {
+              "doc_id": "doc_38_0_2",
+              "title": "Doc 2",
+              "content": "Random content snippet 331"
+            }
+          ]
+        },
+        {
+          "name": "retrieval",
+          "latency_ms": 136,
+          "model": "custom-small",
+          "temperature": 0.99,
+          "token_usage": {
+            "prompt_tokens": 31,
+            "completion_tokens": 79
+          },
+          "output_docs": [
+            {
+              "doc_id": "doc_38_1_0",
+              "title": "Doc 0",
+              "content": "Random content snippet 965"
+            },
+            {
+              "doc_id": "doc_38_1_1",
+              "title": "Doc 1",
+              "content": "Random content snippet 842"
+            }
+          ]
+        },
+        {
+          "name": "retrieval",
+          "latency_ms": 212,
+          "model": "gpt-3.5",
+          "temperature": 0.51,
+          "token_usage": {
+            "prompt_tokens": 37,
+            "completion_tokens": 37
+          },
+          "output_docs": [
+            {
+              "doc_id": "doc_38_2_0",
+              "title": "Doc 0",
+              "content": "Random content snippet 217"
+            }
+          ]
+        },
+        {
+          "name": "retrieval",
+          "latency_ms": 204,
+          "model": "gpt-3.5",
+          "temperature": 0.3,
+          "token_usage": {
+            "prompt_tokens": 33,
+            "completion_tokens": 35
+          },
+          "output_docs": [
+            {
+              "doc_id": "doc_38_3_0",
+              "title": "Doc 0",
+              "content": "Random content snippet 681"
+            },
+            {
+              "doc_id": "doc_38_3_1",
+              "title": "Doc 1",
+              "content": "Random content snippet 761"
+            }
+          ]
+        }
+      ],
+      "final_output": "France (2018 FIFA World Cup winner)",
+      "metadata": {
+        "user_id": "u918",
+        "region": "APAC",
+        "timestamp": "2025-09-24T21:34:00Z"
+      },
+      "metrics": {
+        "faithfulness": 0.84,
+        "relevance": 0.89,
+        "cost_usd": 0.091
+      }
+    },
+    {
+      "trace_id": "trace_0039",
+      "user_query": "What is the capital of Canada?",
+      "steps": [
+        {
+          "name": "llm_generation",
+          "latency_ms": 192,
+          "model": "gpt-3.5",
+          "temperature": 0.63,
+          "token_usage": {
+            "prompt_tokens": 26,
+            "completion_tokens": 21
+          }
+        },
+        {
+          "name": "prompt_construction",
+          "latency_ms": 77,
+          "model": "gpt-4",
+          "temperature": 0.32,
+          "token_usage": {
+            "prompt_tokens": 12,
+            "completion_tokens": 81
+          }
+        },
+        {
+          "name": "prompt_construction",
+          "latency_ms": 290,
+          "model": "custom-small",
+          "temperature": 0.41,
+          "token_usage": {
+            "prompt_tokens": 48,
+            "completion_tokens": 30
+          }
+        }
+      ],
+      "final_output": "Some final answer text.",
+      "metadata": {
+        "user_id": "u692",
+        "region": "APAC",
+        "timestamp": "2025-09-24T21:14:00Z"
+      },
+      "metrics": {
+        "faithfulness": 0.85,
+        "relevance": 0.88,
+        "cost_usd": 0.047
+      }
+    },
+    {
+      "trace_id": "trace_0040",
+      "user_query": "What is the capital of Canada?",
+      "steps": [
+        {
+          "name": "llm_generation",
+          "latency_ms": 186,
+          "model": "gpt-3.5",
+          "temperature": 0.26,
+          "token_usage": {
+            "prompt_tokens": 29,
+            "completion_tokens": 30
+          }
+        },
+        {
+          "name": "llm_generation",
+          "latency_ms": 84,
+          "model": "bert-base",
+          "temperature": 0.89,
+          "token_usage": {
+            "prompt_tokens": 35,
+            "completion_tokens": 73
+          }
+        }
+      ],
+      "final_output": "Some final answer text.",
+      "metadata": {
+        "user_id": "u767",
+        "region": "APAC",
+        "timestamp": "2025-09-24T20:57:00Z"
+      },
+      "metrics": {
+        "faithfulness": 0.88,
+        "relevance": 0.81,
+        "cost_usd": 0.083
+      }
+    },
+    {
+      "trace_id": "trace_0041",
+      "user_query": "Summarize the plot of Inception in one sentence.",
+      "steps": [
+        {
+          "name": "retrieval",
+          "latency_ms": 111,
+          "model": "gpt-4",
+          "temperature": 0.81,
+          "token_usage": {
+            "prompt_tokens": 44,
+            "completion_tokens": 26
+          },
+          "output_docs": [
+            {
+              "doc_id": "doc_41_0_0",
+              "title": "Doc 0",
+              "content": "Random content snippet 512"
+            },
+            {
+              "doc_id": "doc_41_0_1",
+              "title": "Doc 1",
+              "content": "Random content snippet 847"
+            },
+            {
+              "doc_id": "doc_41_0_2",
+              "title": "Doc 2",
+              "content": "Random content snippet 462"
+            }
+          ]
+        },
+        {
+          "name": "llm_generation",
+          "latency_ms": 115,
+          "model": "custom-small",
+          "temperature": 0.59,
+          "token_usage": {
+            "prompt_tokens": 10,
+            "completion_tokens": 82
+          }
+        },
+        {
+          "name": "prompt_construction",
+          "latency_ms": 189,
+          "model": "gpt-4",
+          "temperature": 0.57,
+          "token_usage": {
+            "prompt_tokens": 40,
+            "completion_tokens": 50
+          }
+        }
+      ],
+      "final_output": "A thief enters dreams to steal secrets, but plants an idea instead.",
+      "metadata": {
+        "user_id": "u801",
+        "region": "APAC",
+        "timestamp": "2025-09-24T21:46:00Z"
+      },
+      "metrics": {
+        "faithfulness": 0.81,
+        "relevance": 0.88,
+        "cost_usd": 0.071
+      }
+    },
+    {
+      "trace_id": "trace_0042",
+      "user_query": "Explain quantum entanglement simply.",
+      "steps": [
+        {
+          "name": "llm_generation",
+          "latency_ms": 72,
+          "model": "custom-small",
+          "temperature": 0.27,
+          "token_usage": {
+            "prompt_tokens": 37,
+            "completion_tokens": 27
+          }
+        }
+      ],
+      "final_output": "Some final answer text.",
+      "metadata": {
+        "user_id": "u452",
+        "region": "US",
+        "timestamp": "2025-09-24T20:48:00Z"
+      },
+      "metrics": {
+        "faithfulness": 0.84,
+        "relevance": 0.84,
+        "cost_usd": 0.012
+      }
+    },
+    {
+      "trace_id": "trace_0043",
+      "user_query": "Explain quantum entanglement simply.",
+      "steps": [
+        {
+          "name": "prompt_construction",
+          "latency_ms": 53,
+          "model": "custom-small",
+          "temperature": 0.25,
+          "token_usage": {
+            "prompt_tokens": 13,
+            "completion_tokens": 90
+          }
+        },
+        {
+          "name": "retrieval",
+          "latency_ms": 151,
+          "model": "custom-small",
+          "temperature": 0.26,
+          "token_usage": {
+            "prompt_tokens": 39,
+            "completion_tokens": 73
+          },
+          "output_docs": [
+            {
+              "doc_id": "doc_43_1_0",
+              "title": "Doc 0",
+              "content": "Random content snippet 715"
+            }
+          ]
+        },
+        {
+          "name": "prompt_construction",
+          "latency_ms": 174,
+          "model": "gpt-4",
+          "temperature": 0.17,
+          "token_usage": {
+            "prompt_tokens": 39,
+            "completion_tokens": 99
+          }
+        }
+      ],
+      "final_output": "Some final answer text.",
+      "metadata": {
+        "user_id": "u759",
+        "region": "APAC",
+        "timestamp": "2025-09-24T21:38:00Z"
+      },
+      "metrics": {
+        "faithfulness": 0.97,
+        "relevance": 0.91,
+        "cost_usd": 0.055
+      }
+    },
+    {
+      "trace_id": "trace_0044",
+      "user_query": "Explain quantum entanglement simply.",
+      "steps": [
+        {
+          "name": "llm_generation",
+          "latency_ms": 108,
+          "model": "gpt-4",
+          "temperature": 0.46,
+          "token_usage": {
+            "prompt_tokens": 31,
+            "completion_tokens": 45
+          }
+        },
+        {
+          "name": "llm_generation",
+          "latency_ms": 102,
+          "model": "gpt-3.5",
+          "temperature": 0.19,
+          "token_usage": {
+            "prompt_tokens": 22,
+            "completion_tokens": 81
+          }
+        },
+        {
+          "name": "retrieval",
+          "latency_ms": 137,
+          "model": "gpt-4",
+          "temperature": 0.78,
+          "token_usage": {
+            "prompt_tokens": 25,
+            "completion_tokens": 27
+          },
+          "output_docs": [
+            {
+              "doc_id": "doc_44_2_0",
+              "title": "Doc 0",
+              "content": "Random content snippet 900"
+            },
+            {
+              "doc_id": "doc_44_2_1",
+              "title": "Doc 1",
+              "content": "Random content snippet 399"
+            }
+          ]
+        }
+      ],
+      "final_output": "Some final answer text.",
+      "metadata": {
+        "user_id": "u703",
+        "region": "EU",
+        "timestamp": "2025-09-24T21:10:00Z"
+      },
+      "metrics": {
+        "faithfulness": 0.98,
+        "relevance": 0.86,
+        "cost_usd": 0.016
+      }
+    },
+    {
+      "trace_id": "trace_0045",
+      "user_query": "Explain quantum entanglement simply.",
+      "steps": [
+        {
+          "name": "prompt_construction",
+          "latency_ms": 135,
+          "model": "bert-base",
+          "temperature": 0.92,
+          "token_usage": {
+            "prompt_tokens": 47,
+            "completion_tokens": 74
+          }
+        },
+        {
+          "name": "llm_generation",
+          "latency_ms": 166,
+          "model": "gpt-4",
+          "temperature": 0.44,
+          "token_usage": {
+            "prompt_tokens": 24,
+            "completion_tokens": 59
+          }
+        }
+      ],
+      "final_output": "Some final answer text.",
+      "metadata": {
+        "user_id": "u329",
+        "region": "EU",
+        "timestamp": "2025-09-24T21:57:00Z"
+      },
+      "metrics": {
+        "faithfulness": 0.85,
+        "relevance": 0.81,
+        "cost_usd": 0.094
+      }
+    },
+    {
+      "trace_id": "trace_0046",
+      "user_query": "Who won the 2018 World Cup?",
+      "steps": [
+        {
+          "name": "retrieval",
+          "latency_ms": 272,
+          "model": "custom-small",
+          "temperature": 0.69,
+          "token_usage": {
+            "prompt_tokens": 26,
+            "completion_tokens": 53
+          },
+          "output_docs": [
+            {
+              "doc_id": "doc_46_0_0",
+              "title": "Doc 0",
+              "content": "Random content snippet 569"
+            }
+          ]
+        },
+        {
+          "name": "prompt_construction",
+          "latency_ms": 203,
+          "model": "bert-base",
+          "temperature": 0.66,
+          "token_usage": {
+            "prompt_tokens": 12,
+            "completion_tokens": 35
+          }
+        }
+      ],
+      "final_output": "France (2018 FIFA World Cup winner)",
+      "metadata": {
+        "user_id": "u558",
+        "region": "APAC",
+        "timestamp": "2025-09-24T21:17:00Z"
+      },
+      "metrics": {
+        "faithfulness": 0.96,
+        "relevance": 0.81,
+        "cost_usd": 0.09
+      }
+    },
+    {
+      "trace_id": "trace_0047",
+      "user_query": "Translate 'Hello World' into French, Spanish, and Italian.",
+      "steps": [
+        {
+          "name": "prompt_construction",
+          "latency_ms": 268,
+          "model": "gpt-3.5",
+          "temperature": 0.71,
+          "token_usage": {
+            "prompt_tokens": 30,
+            "completion_tokens": 95
+          }
+        }
+      ],
+      "final_output": {
+        "fr": "Bonjour le monde",
+        "es": "Hola Mundo",
+        "it": "Ciao Mondo"
+      },
+      "metadata": {
+        "user_id": "u845",
+        "region": "APAC",
+        "timestamp": "2025-09-24T20:53:00Z"
+      },
+      "metrics": {
+        "faithfulness": 0.88,
+        "relevance": 0.95,
+        "cost_usd": 0.018
+      }
+    },
+    {
+      "trace_id": "trace_0048",
+      "user_query": "Explain quantum entanglement simply.",
+      "steps": [
+        {
+          "name": "llm_generation",
+          "latency_ms": 188,
+          "model": "bert-base",
+          "temperature": 0.66,
+          "token_usage": {
+            "prompt_tokens": 21,
+            "completion_tokens": 44
+          }
+        },
+        {
+          "name": "retrieval",
+          "latency_ms": 300,
+          "model": "bert-base",
+          "temperature": 0.92,
+          "token_usage": {
+            "prompt_tokens": 37,
+            "completion_tokens": 92
+          },
+          "output_docs": [
+            {
+              "doc_id": "doc_48_1_0",
+              "title": "Doc 0",
+              "content": "Random content snippet 947"
+            }
+          ]
+        },
+        {
+          "name": "prompt_construction",
+          "latency_ms": 166,
+          "model": "gpt-3.5",
+          "temperature": 1.0,
+          "token_usage": {
+            "prompt_tokens": 46,
+            "completion_tokens": 49
+          }
+        }
+      ],
+      "final_output": "Some final answer text.",
+      "metadata": {
+        "user_id": "u532",
+        "region": "APAC",
+        "timestamp": "2025-09-24T20:17:00Z"
+      },
+      "metrics": {
+        "faithfulness": 0.81,
+        "relevance": 0.88,
+        "cost_usd": 0.037
+      }
+    },
+    {
+      "trace_id": "trace_0049",
+      "user_query": "Translate 'Hello World' into French, Spanish, and Italian.",
+      "steps": [
+        {
+          "name": "llm_generation",
+          "latency_ms": 191,
+          "model": "gpt-3.5",
+          "temperature": 0.47,
+          "token_usage": {
+            "prompt_tokens": 32,
+            "completion_tokens": 29
+          }
+        }
+      ],
+      "final_output": {
+        "fr": "Bonjour le monde",
+        "es": "Hola Mundo",
+        "it": "Ciao Mondo"
+      },
+      "metadata": {
+        "user_id": "u926",
+        "region": "EU",
+        "timestamp": "2025-09-24T20:55:00Z"
+      },
+      "metrics": {
+        "faithfulness": 0.86,
+        "relevance": 0.97,
+        "cost_usd": 0.015
+      }
+    },
+    {
+      "trace_id": "trace_0050",
+      "user_query": "Explain quantum entanglement simply.",
+      "steps": [
+        {
+          "name": "llm_generation",
+          "latency_ms": 231,
+          "model": "gpt-3.5",
+          "temperature": 0.64,
+          "token_usage": {
+            "prompt_tokens": 17,
+            "completion_tokens": 42
+          }
+        },
+        {
+          "name": "llm_generation",
+          "latency_ms": 267,
+          "model": "custom-small",
+          "temperature": 0.14,
+          "token_usage": {
+            "prompt_tokens": 26,
+            "completion_tokens": 91
+          }
+        },
+        {
+          "name": "retrieval",
+          "latency_ms": 169,
+          "model": "custom-small",
+          "temperature": 0.29,
+          "token_usage": {
+            "prompt_tokens": 18,
+            "completion_tokens": 82
+          },
+          "output_docs": [
+            {
+              "doc_id": "doc_50_2_0",
+              "title": "Doc 0",
+              "content": "Random content snippet 767"
+            }
+          ]
+        },
+        {
+          "name": "retrieval",
+          "latency_ms": 193,
+          "model": "custom-small",
+          "temperature": 0.73,
+          "token_usage": {
+            "prompt_tokens": 33,
+            "completion_tokens": 56
+          },
+          "output_docs": [
+            {
+              "doc_id": "doc_50_3_0",
+              "title": "Doc 0",
+              "content": "Random content snippet 955"
+            },
+            {
+              "doc_id": "doc_50_3_1",
+              "title": "Doc 1",
+              "content": "Random content snippet 577"
+            },
+            {
+              "doc_id": "doc_50_3_2",
+              "title": "Doc 2",
+              "content": "Random content snippet 863"
+            }
+          ]
+        }
+      ],
+      "final_output": "Some final answer text.",
+      "metadata": {
+        "user_id": "u199",
+        "region": "EU",
+        "timestamp": "2025-09-24T20:18:00Z"
+      },
+      "metrics": {
+        "faithfulness": 1.0,
+        "relevance": 0.99,
+        "cost_usd": 0.057
+      }
+    }
+  ]
+}
